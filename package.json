@@ -1,36 +1,40 @@
 {
-  "name": "n8n-nodes-data-validator",
-  "version": "1.0.0",
-  "description": "Validate data inside your n8n workflow — catch duplicates, impossible dates, broken numbers and silent data loss before they reach the next node.",
+  "name": "n8n-nodes-datacheck",
+  "version": "1.1.0",
+  "description": "Catch data problems inside your n8n workflow before they reach the next node — duplicate keys, impossible dates like 2026-02-30, amounts that become NaN, rows that vanish silently.",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
     "data-quality",
-    "validation",
+    "data-validation",
     "csv",
     "etl",
-    "data-cleaning"
+    "data-cleaning",
+    "automation"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/contentforge-press/n8n-nodes-data-validator",
+  "author": "ContentForge",
+  "homepage": "https://github.com/contentforge-press/n8n-nodes-datacheck",
   "repository": {
     "type": "git",
-    "url": "https://github.com/contentforge-press/n8n-nodes-data-validator"
+    "url": "git+https://github.com/contentforge-press/n8n-nodes-datacheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/contentforge-press/n8n-nodes-datacheck/issues"
   },
   "main": "index.js",
-  "scripts": {
-    "test": "node test/run.js"
-  },
   "files": [
     "index.js",
     "nodes",
-    "credentials"
+    "core",
+    "README.md"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/DataValidator/DataValidator.node.js"
-    ]
+      "nodes/DataValidator.node.js"
+    ],
+    "credentials": []
   },
   "engines": {
     "node": ">=18"
