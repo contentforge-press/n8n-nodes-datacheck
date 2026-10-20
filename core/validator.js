@@ -253,7 +253,7 @@ function validate(csvText, options) {
             fix: "normalize to YYYY-MM-DD, then re-validate",
           });
         }
-      } else if (col.inferredType === "number" || col.inferredType === "money") {
+      } else if (col.inferredType === "number" || col.inferredType === "money" || col.inferredType === "mixed") {
         const isNum = /^-?\d*\.?\d+$/.test(v);
         if (!isNum && !parseMoney(v).ok) {
           issues.push({
